@@ -13,19 +13,20 @@ package lemurdatabase;
 public class Mammal {
   
   private int itsAge;
-  private int itsWeight;
+  private double itsWeight;
   private String breed;
 
   public Mammal() {
-    itsAge = 9;
-    itsWeight = 5;
+    itsAge = (int) Math.random() * 11 + 1;
+    itsWeight = (double) Math.random() * 5 + 1;
+    
   }
 
   public int getAge() {
     return itsAge;
   }
 
-  public int getWeight() {
+  public double getWeight() {
     return itsWeight;
   }
 
@@ -41,8 +42,9 @@ public class Mammal {
     return breed;
   }
 
-  public void setBreed(String newBreed) {
-    breed = newBreed;
+  public void setBreed(String printBreed, boolean newBreed) {
+    
+    
   }
 }
 
