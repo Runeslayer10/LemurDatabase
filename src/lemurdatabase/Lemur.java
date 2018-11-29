@@ -12,23 +12,24 @@ package lemurdatabase;
  */
 public class Lemur extends Mammal{
     
-    private String gender;
-    private String location;
-    private String classifcation;
-    private String fur;
-    
-    
-    public void Lemur (){
-        
-    location = "Madagascar";
-    gender = "Male";
-    classifcation = "Prosimian";
-    fur = "Fur";
-}
-    public void setGender (String male){
-        gender = male;
+    String location = "Madagascar";
+    String classification = "Prosimian";
+    String coat = "Fur";
+
+    public void groom() {
+        System.out.println("The Lemur is grooming itself using its teeth as a comb.");
     }
-    public String getGender(){
-        return gender;
+
+    public String toString() {
+        String output = super.toString();
+        output += "Location = " + location + "\n";
+        output += "Classification = " + classification + "\n";
+        output += "Coat = " + coat;
+
+        if(getGender().equals("Female")){
+            output += "\nFemale Lemur = Dominant Role";
+        }
+        return output;
     }
+
 }
